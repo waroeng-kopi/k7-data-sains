@@ -29,7 +29,7 @@ print(f"Akurasi: {accuracy_score(y_test, y_pred)}")
 print("Laporan Klasifikasi:")
 print(classification_report(y_test, y_pred))
 
-# Visualisasi pohon keputusan
+# Visualisasi pohon keputusan dan simpan ke PDF
 plt.figure(figsize=(20, 10))
 plot_tree(
     model,
@@ -37,4 +37,5 @@ plot_tree(
     class_names=['No Death', 'Death'],
     filled=True
 )
+plt.savefig("decision_tree_plot.pdf", format='pdf', bbox_inches='tight')
 plt.show()
