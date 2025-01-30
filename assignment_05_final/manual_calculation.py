@@ -60,21 +60,21 @@ plt.show()
 
 
 
-# # Iterasi 3: Bangun model pohon keputusan penuh
-# model_iter3 = DecisionTreeClassifier(criterion='entropy', random_state=42)
-# model_iter3.fit(X_train, y_train)
+# Iterasi 3: Bangun model pohon keputusan penuh
+model_iter3 = DecisionTreeClassifier(criterion='entropy', random_state=42)
+model_iter3.fit(X_train, y_train)
 
-# # Evaluasi model pada iterasi ketiga
-# y_pred_iter3 = model_iter3.predict(X_test)
-# print(f"Iterasi 3 - Akurasi: {accuracy_score(y_test, y_pred_iter3)}")
-# print("Iterasi 3 - Laporan Klasifikasi:")
-# print(classification_report(y_test, y_pred_iter3))
+# Evaluasi model pada iterasi ketiga
+y_pred_iter3 = model_iter3.predict(X_test)
+print(f"Iterasi 3 - Akurasi: {accuracy_score(y_test, y_pred_iter3)}")
+print("Iterasi 3 - Laporan Klasifikasi:")
+print(classification_report(y_test, y_pred_iter3))
 
-# # Visualisasi pohon keputusan untuk iterasi 3
-# plt.figure(figsize=(40, 10))
-# plot_tree(model_iter3, feature_names=X.columns, class_names=['No', 'Yes'], filled=True)
-# plt.title("Pohon Keputusan - Iterasi 3", fontsize = 40)
-# plt.savefig("decision_tree_plot_iterasi_3.svg", format='svg', bbox_inches='tight', dpi=1200)
-# plt.savefig("decision_tree_plot_iterasi_3.pdf", format='pdf', bbox_inches='tight', dpi=1200)
-# plt.savefig("decision_tree_plot_iterasi_3.png", format='png', bbox_inches='tight', dpi=1200)
-# plt.show()
+# Visualisasi pohon keputusan untuk iterasi 3
+plt.figure(figsize=(40, 10))
+plot_tree(model_iter3, feature_names=X.columns, class_names=['No', 'Yes'], filled=True)
+plt.title("Pohon Keputusan - Iterasi 3", fontsize = 40)
+plt.savefig("decision_tree_plot_iterasi_3.svg", format='svg', bbox_inches='tight', dpi=1200)
+plt.savefig("decision_tree_plot_iterasi_3.pdf", format='pdf', bbox_inches='tight', dpi=1200)
+plt.savefig("decision_tree_plot_iterasi_3.png", format='png', bbox_inches='tight', dpi=1200)
+plt.show()
