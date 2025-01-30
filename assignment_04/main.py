@@ -29,12 +29,13 @@ print("Laporan Klasifikasi:")
 print(classification_report(y_test, y_pred))
 
 # Visualisasi pohon keputusan dan simpan ke PDF
-plt.figure(figsize=(20, 10))
+plt.figure(figsize=(30, 10))
 plot_tree(
     model,
     feature_names=X.columns,
     class_names=['No Death', 'Death'],
     filled=True
 )
-plt.savefig("decision_tree_plot.pdf", format='pdf', bbox_inches='tight')
+plt.savefig("decision_tree_plot.pdf", format='pdf', bbox_inches='tight', dpi=600)
+plt.savefig("decision_tree_plot.png", format='png', bbox_inches='tight', dpi=600)
 plt.show()
